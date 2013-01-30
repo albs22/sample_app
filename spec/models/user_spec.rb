@@ -59,7 +59,8 @@ describe User do
     it { should_not be_valid }
   end
 
- describe "return value of authenticate mehod" do
+  describe "return value of authenticate mehod" do
+
     before { @user.save }
     let(:found_user) { User.find_by_email(@user.email) }
     
@@ -79,7 +80,6 @@ describe User do
     it { should be_invalid }
   end
  
-
 # describe "when email format is invalid" do
 #    it "should be invalid" do
 #      addresses = %w[user@foo,com user_at_foo.org example.user@foo.
